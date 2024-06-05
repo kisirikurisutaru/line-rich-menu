@@ -5,6 +5,7 @@ export async function GET() {
     headers: {
       'Authorization': `Bearer ${process.env.NEXT_PUBLIC_LINE_ACCESSTOKEN}`,
     },
+    cache: 'no-cache',
   })
 
   const data = await res.json()
